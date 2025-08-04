@@ -6,8 +6,7 @@ Pod::Spec.new do |s|
   s.homepage         = 'https://github.com/tuya'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'ios' => 'developer@tuya.com' }
-  # s.source           = { :git => '', :tag => s.version.to_s }
-  # s.source       = { :path => '.' }
+  s.source           = { :git => '', :tag => s.version.to_s }
   # s.prepare_command = <<-CMD
 
   #     if [ -f "ios_core_sdk.tar.gz" ]; then
@@ -22,12 +21,12 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '9.0'
   s.watchos.deployment_target = '2.0'
 
-  # s.ios.source_files = 'Frameworks/ThingSmartCryption.xcframework/ios*simulator/ThingSmartCryption.framework/Headers/*'
-  # s.resources = ['Frameworks/ThingSmartCryption.xcframework/ios*simulator/**/*.bundle', 'Frameworks/ThingSmartCryption.xcframework/ios*simulator/**/t_cdc.tcfg']
+  s.ios.source_files = 'Frameworks/Build/ThingSmartCryption.xcframework/ios*simulator/ThingSmartCryption.framework/Headers/*'
+  s.resources = ['Frameworks/Build/ThingSmartCryption.xcframework/ios*simulator/**/*.bundle', 'Build/ThingSmartCryption.xcframework/ios*simulator/**/t_cdc.tcfg']
 
-  # s.watchos.source_files = 'Frameworks/ThingSmartCryption.xcframework/watchos*simulator/ThingSmartCryption.framework/Headers/*'
+  s.watchos.source_files = 'Frameworks/Build/ThingSmartCryption.xcframework/watchos*simulator/ThingSmartCryption.framework/Headers/*'
 
-  s.vendored_frameworks = '../Frameworks/ThingSmartCryption.xcframework'
+  s.vendored_frameworks = 'Frameworks/Build/ThingSmartCryption.xcframework'
 
   s.user_target_xcconfig = { 
     'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES',
