@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'ThingSmartCryption'
-  s.version          = '6.4.0'
+  s.version          = '5.0.0'
   s.summary          = 'This is an encrypted SDK designed to ensure basic security.'
   s.description      = 'This is an encrypted SDK designed to ensure basic security.'
   s.homepage         = 'https://github.com/tuya'
