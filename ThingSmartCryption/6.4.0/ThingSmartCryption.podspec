@@ -18,8 +18,8 @@ Pod::Spec.new do |s|
   #     fi
 
   # CMD
-  s.ios.deployment_target = '9.0'
-  s.watchos.deployment_target = '2.0'
+  # s.ios.deployment_target = '9.0'
+  # s.watchos.deployment_target = '2.0'
 
   s.ios.source_files = 'ThingSmartCryption.framework/Headers/*'
   # s.resources = ['Build/ThingSmartCryption.xcframework/ios*simulator/**/*.bundle', 'Build/ThingSmartCryption.xcframework/ios*simulator/**/t_cdc.tcfg']
