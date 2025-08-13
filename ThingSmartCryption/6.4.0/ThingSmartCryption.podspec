@@ -28,10 +28,10 @@ Pod::Spec.new do |s|
 
   s.vendored_frameworks = 'ThingSmartCryption.framework'
 
-  s.user_target_xcconfig = { 
+  # s.user_target_xcconfig = { 
     'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES',
   }
-  s.pod_target_xcconfig = { 
+  # s.pod_target_xcconfig = { 
     'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES',
     'DEFINES_MODULE' => 'YES',
     'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64',
