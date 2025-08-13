@@ -30,7 +30,7 @@ Pod::Spec.new do |s|
 
   s.watchos.source_files = 'Build/ThingSmartCryption.xcframework/watchos*simulator/ThingSmartCryption.framework/Headers/*'
 
-  s.vendored_frameworks = 'Build/ThingSmartCryption.xcframework'
+  s.vendored_frameworks = 'Build/ThingSmartCryption.xcframework/**/*.framework'
 
   s.user_target_xcconfig = { 
     'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES',
