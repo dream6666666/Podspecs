@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
   s.homepage         = 'https://github.com/tuya'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'ios' => 'developer@tuya.com' }
-  s.source           = { :git => 'https://github.com/tuya/tuya-pod-specs.git', :tag => s.version.to_s }
+  s.source           = { :path => './' }
   # s.prepare_command = <<-CMD
 
   #     if [ -f "ios_core_sdk.tar.gz" ]; then
