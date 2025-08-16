@@ -34,6 +34,6 @@ Pod::Spec.new do |s|
   s.pod_target_xcconfig = { 
     'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES',
     'DEFINES_MODULE' => 'YES',
-    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => '',
+    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64',
   }
 end
