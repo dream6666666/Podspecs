@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
 
   # CMD
   s.ios.deployment_target = '9.0'
-  s.static_framework = false
+  s.static_framework = true
   s.watchos.deployment_target = '2.0'
 
   s.ios.source_files = 'ThingSmartCryption.xcframework/ios*simulator/ThingSmartCryption.framework/Headers/*'
