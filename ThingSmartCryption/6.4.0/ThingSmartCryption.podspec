@@ -7,6 +7,7 @@ Pod::Spec.new do |s|
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'ios' => 'developer@tuya.com' }
   s.source           = { :git => '', :tag => s.version.to_s }
+  s.static_framework = true
   # s.prepare_command = <<-CMD
 
   #     if [ -f "ios_core_sdk.tar.gz" ]; then
