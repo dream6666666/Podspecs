@@ -7,6 +7,7 @@ Pod::Spec.new do |s|
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'ios' => 'developer@tuya.com' }
   s.source           = { :git => '', :tag => s.version.to_s }
+  
   # s.prepare_command = <<-CMD
 
   #     if [ -f "ios_core_sdk.tar.gz" ]; then
@@ -19,14 +20,15 @@ Pod::Spec.new do |s|
 
   # CMD
   s.ios.deployment_target = '9.0'
+  s.static_framework = true
   s.watchos.deployment_target = '2.0'
 
-  s.ios.source_files = 'ThingSmartCryption.framework/Headers/*'
-  s.resources = ['ThingSmartCryption.framework/**/*.bundle', 'ThingSmartCryption.framework/**/t_cdc.tcfg']
+  s.ios.source_files = 'ThingSmartCryption.xcframework/ios*simulator/ThingSmartCryption.framework/Headers/*'
+  s.resources = ['ThingSmartCryption.xcframework/ios*simulator/**/*.bundle', 'ThingSmartCryption.xcframework/ios*simulator/**/t_cdc.tcfg']
 
-  # s.watchos.source_files = 'ThingSmartCryption.framework/Headers/*'
+  s.watchos.source_files = 'ThingSmartCryption.xcframework/watchos*simulator/ThingSmartCryption.framework/Headers/*'
 
-  s.vendored_frameworks = 'ThingSmartCryption.framework'
+  s.vendored_frameworks = 'ThingSmartCryption.xcframework'
 
   s.user_target_xcconfig = { 
     'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES',
@@ -34,6 +36,6 @@ Pod::Spec.new do |s|
   s.pod_target_xcconfig = { 
     'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES',
     'DEFINES_MODULE' => 'YES',
-    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64',
+    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
   }
 end
