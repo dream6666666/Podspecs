@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'ios' => 'developer@tuya.com' }
   s.source           = { :git => '', :tag => s.version.to_s }
-  s.static_framework = true
+  
   # s.prepare_command = <<-CMD
 
   #     if [ -f "ios_core_sdk.tar.gz" ]; then
@@ -20,6 +20,7 @@ Pod::Spec.new do |s|
 
   # CMD
   s.ios.deployment_target = '9.0'
+  s.static_framework = true
   s.watchos.deployment_target = '2.0'
 
   s.ios.source_files = 'ThingSmartCryption.xcframework/ios*simulator/ThingSmartCryption.framework/Headers/*'
